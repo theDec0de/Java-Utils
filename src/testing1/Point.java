@@ -34,4 +34,21 @@ public class Point {
 		Point tempPoint = new Point(p.x + xAm, p.y + yAm);
 		return tempPoint;
 	}
+	
+	public static double findSlope(Point p1, Point p2) {
+		//  m=(y2-y1)/(x2-x1
+		return (p2.y - p1.y) / (p2.x - p1.x);
+	}
+	
+	public static Point dialatePoint(Point p1, double k) {
+		return new Point(p1.x * k, p1.y * k);
+	}
+	
+	public static Point rotate90ClockOfOrigin(Point p1) {
+		return new Point(p1.y,(p1.x * -1));
+	}
+	
+	public static Point rotate90CounterOfOrigin(Point p1) {
+		return new Point((p1.y * -1), p1.x);
+	}
 }
